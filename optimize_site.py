@@ -27,6 +27,10 @@ ASSET_NAMES = [
 
 def optimize(source_html: Path) -> None:
     html = source_html.read_text(encoding="utf-8")
+    html = html.replace(
+        ".step .shot .frame img { width: 100%; display: block; }",
+        ".step .shot .frame img { width: 100%; height: auto; display: block; }",
+    )
     image_tags = re.findall(r"<img\b[^>]*>", html)
     embedded_tags = [tag for tag in image_tags if "data:image/" in tag]
     if len(embedded_tags) != len(ASSET_NAMES):
@@ -74,7 +78,7 @@ def optimize(source_html: Path) -> None:
             else 'loading="lazy" decoding="async"'
         )
         new_tag = new_tag[:-1] + (
-            f' width="{width}" height="{height}" {load_attributes}>'
+            f' style="aspect-ratio: {width} / {height};" {load_attributes}>'
         )
         replacements[tag] = new_tag
 

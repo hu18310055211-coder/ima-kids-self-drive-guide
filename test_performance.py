@@ -33,6 +33,17 @@ class PublicGuidePerformanceTests(unittest.TestCase):
             self.assertIn('loading="lazy"', tag)
             self.assertIn('decoding="async"', tag)
 
+    def test_images_preserve_aspect_ratio_in_embedded_webviews(self) -> None:
+        compact_html = re.sub(r"\s+", " ", self.html)
+        self.assertIn(
+            ".step .shot .frame img { width: 100%; height: auto; display: block; }",
+            compact_html,
+        )
+        for tag in self.img_tags:
+            self.assertNotRegex(tag, r'\bwidth="')
+            self.assertNotRegex(tag, r'\bheight="')
+            self.assertIn("aspect-ratio:", tag)
+
     def test_image_assets_fit_mobile_budget(self) -> None:
         assets = sorted(ASSET_DIR.glob("*"))
         self.assertEqual(len(assets), 10)

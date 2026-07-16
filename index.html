@@ -103,7 +103,7 @@
   .step .desc b { color: var(--navy); font-weight: 600; }
   .step .shot { padding: 0 18px 18px; position: relative; }
   .step .shot .frame { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
-  .step .shot .frame img { width: 100%; display: block; }
+  .step .shot .frame img { width: 100%; height: auto; display: block; }
   .app-icon-card {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 10px; padding: 30px 18px; background: var(--cream-alt);
@@ -149,7 +149,7 @@
   </header>
 
   <div class="qr-card">
-    <div class="qr-wrap" data-qr-value="https://ima.qq.com/wiki/?shareId=5791dde976186ffb37d13837a24fbc02e0492e932dbaf67937b3b3ce83444f4b"><img src="assets/01-join-qr.png" alt="首次申请加入知识库二维码" width="600" height="600" loading="eager" decoding="async" fetchpriority="high"></div>
+    <div class="qr-wrap" data-qr-value="https://ima.qq.com/wiki/?shareId=5791dde976186ffb37d13837a24fbc02e0492e932dbaf67937b3b3ce83444f4b"><img src="assets/01-join-qr.png" alt="首次申请加入知识库二维码" style="aspect-ratio: 600 / 600;" loading="eager" decoding="async" fetchpriority="high"></div>
     <p class="cta">首次申请加入</p>
     <a class="direct-open" href="https://ima.qq.com/wiki/?shareId=5791dde976186ffb37d13837a24fbc02e0492e932dbaf67937b3b3ce83444f4b" target="_blank" rel="noopener">直接打开申请页面</a>
     <div class="entry-help">
@@ -174,7 +174,7 @@
       <p class="desc">直接点按钮或微信扫码，都会进入下面这个申请页。右上角<b>「下载」</b>是安装 App 的入口；申请加入请点页面中间红框标出的<b>「加入知识库」</b>。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/02-first-join.webp" alt="ima知识库首次申请页面" width="720" height="1560" loading="lazy" decoding="async">
+          <img src="assets/02-first-join.webp" alt="ima知识库首次申请页面" style="aspect-ratio: 720 / 1560;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:4%; top:36.2%; width:92%; height:5.2%;"></div>
           <div class="tap-tag" style="left:50%; top:34%; transform:translate(-50%,-100%);">点这里申请加入</div>
         </div>
@@ -191,7 +191,7 @@
     <div class="step">
       <div class="step-head"><span class="num">03</span><span class="title">审核通过后，后续无需重复申请</span></div>
       <p class="desc">通过后你已经是知识库成员，<b>以后无需再次扫码或申请</b>，直接按下面的小程序或 App 步骤进入。进入后可以查看<b>阅读版、可打印工具、音频版</b>，也可以在下方直接向 AI 提问。</p>
-      <div class="shot"><div class="frame"><img src="assets/03-content-overview.webp" alt="知识库内容文件夹列表与AI提问入口" width="592" height="1280" loading="lazy" decoding="async"></div></div>
+      <div class="shot"><div class="frame"><img src="assets/03-content-overview.webp" alt="知识库内容文件夹列表与AI提问入口" style="aspect-ratio: 592 / 1280;" loading="lazy" decoding="async"></div></div>
     </div>
   </div>
 
@@ -204,7 +204,7 @@
       <p class="desc">打开微信，下拉或点顶部搜索，输入<b>"ima"</b>，会出现小程序搜索结果，点<b>红框标出的"ima知识库"</b>。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/04-wechat-search.webp" alt="微信搜索ima知识库" width="592" height="1280" loading="lazy" decoding="async">
+          <img src="assets/04-wechat-search.webp" alt="微信搜索ima知识库" style="aspect-ratio: 592 / 1280;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:4%; top:12%; width:92%; height:8.2%;"></div>
           <div class="tap-tag" style="left:50%; top:7%; transform:translate(-50%,-100%);">点这里"ima知识库"</div>
         </div>
@@ -216,7 +216,7 @@
       <p class="desc">进入小程序后，先点顶部<b>当前知识库名称旁边的下拉箭头</b>，打开知识库选择列表。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/05-mini-program-dropdown.webp" alt="点击顶部当前知识库名称" width="720" height="380" loading="lazy" decoding="async">
+          <img src="assets/05-mini-program-dropdown.webp" alt="点击顶部当前知识库名称" style="aspect-ratio: 720 / 380;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:3%; top:47%; width:38%; height:20%;"></div>
           <div class="tap-tag" style="left:42%; top:35%; transform:translate(-50%,-100%);">先点这里</div>
         </div>
@@ -228,7 +228,7 @@
       <p class="desc">弹出"选择知识库"列表后，找到<b>"共享知识库"</b>分组，点<b>红框标出的"孩子自驱力培养…"</b>这一条。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/06-mini-program-shared-library.webp" alt="选择共享知识库里的孩子自驱力培养" width="720" height="950" loading="lazy" decoding="async">
+          <img src="assets/06-mini-program-shared-library.webp" alt="选择共享知识库里的孩子自驱力培养" style="aspect-ratio: 720 / 950;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:3%; top:75%; width:94%; height:11%;"></div>
           <div class="tap-tag" style="left:50%; top:68%; transform:translate(-50%,-100%);">再点这一条</div>
         </div>
@@ -238,7 +238,7 @@
     <div class="step">
       <div class="step-head"><span class="num">04</span><span class="title">进入后直接查看全部内容</span></div>
       <p class="desc">点击后直接查看全部内容，不需要再次申请或等待审核。</p>
-      <div class="shot"><div class="frame"><img src="assets/07-content-list.webp" alt="知识库内容文件夹列表" width="592" height="1280" loading="lazy" decoding="async"></div></div>
+      <div class="shot"><div class="frame"><img src="assets/07-content-list.webp" alt="知识库内容文件夹列表" style="aspect-ratio: 592 / 1280;" loading="lazy" decoding="async"></div></div>
     </div>
   </div>
 
@@ -252,7 +252,7 @@
       <div class="shot">
         <div class="frame">
           <div class="app-icon-card">
-            <img src="assets/08-ima-app-icon.webp" alt="ima知识库App图标" width="256" height="256" loading="lazy" decoding="async">
+            <img src="assets/08-ima-app-icon.webp" alt="ima知识库App图标" style="aspect-ratio: 256 / 256;" loading="lazy" decoding="async">
             <span>ima知识库</span>
           </div>
         </div>
@@ -264,7 +264,7 @@
       <p class="desc">App打开后，点底部导航栏<b>红框标出的"知识库"</b>这个tab。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/09-app-library-tab.webp" alt="App底部导航知识库tab" width="592" height="1280" loading="lazy" decoding="async">
+          <img src="assets/09-app-library-tab.webp" alt="App底部导航知识库tab" style="aspect-ratio: 592 / 1280;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:23%; top:92.5%; width:28%; height:7%;"></div>
           <div class="tap-tag" style="left:37%; top:86%; transform:translate(-50%,-100%);">点这里</div>
         </div>
@@ -276,7 +276,7 @@
       <p class="desc">往下滑到<b>"共享知识库"</b>分组，点<b>红框标出的"孩子自驱力培养…"</b>卡片。点击后直接进入并查看内容，不需要再次申请或等待审核。</p>
       <div class="shot">
         <div class="frame">
-          <img src="assets/10-app-shared-library.webp" alt="App内共享知识库列表" width="592" height="1280" loading="lazy" decoding="async">
+          <img src="assets/10-app-shared-library.webp" alt="App内共享知识库列表" style="aspect-ratio: 592 / 1280;" loading="lazy" decoding="async">
           <div class="tap-marker" style="left:4%; top:32%; width:92%; height:7%;"></div>
           <div class="tap-tag" style="left:50%; top:26%; transform:translate(-50%,-100%);">点这里</div>
         </div>
