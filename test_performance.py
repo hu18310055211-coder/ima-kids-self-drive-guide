@@ -44,6 +44,26 @@ class PublicGuidePerformanceTests(unittest.TestCase):
             self.assertNotRegex(tag, r'\bheight="')
             self.assertIn("aspect-ratio:", tag)
 
+    def test_step_visuals_use_uniform_phone_frames(self) -> None:
+        self.assertEqual(self.html.count('class="frame uniform-shot"'), 8)
+        self.assertEqual(
+            self.html.count('class="frame uniform-shot icon-shot"'),
+            1,
+        )
+        self.assertEqual(self.html.count('class="image-stage '), 8)
+        self.assertIn("aspect-ratio: 9 / 16", self.html)
+
+    def test_uniform_frames_reuse_existing_assets_as_backgrounds(self) -> None:
+        for number in range(2, 11):
+            if number == 8:
+                continue
+            source = re.search(
+                rf'src="(assets/{number:02d}-[^"]+)"',
+                self.html,
+            ).group(1)
+            self.assertIn(f"--shot-bg: url('{source}')", self.html)
+        self.assertEqual(len(self.img_tags), 10)
+
     def test_image_assets_fit_mobile_budget(self) -> None:
         assets = sorted(ASSET_DIR.glob("*"))
         self.assertEqual(len(assets), 10)
